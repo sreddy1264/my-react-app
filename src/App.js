@@ -20,6 +20,7 @@ import {
 } from "./utils";
 import { VirtualizedList } from './components/VirtualizedList';
 import { InfiniteScrolling } from './components/InfiniteScrolling';
+import { StarRating } from './components/StarRating';
 
 function App() {
   //  If we list all the natural numbers below 10 that are multiples of 3
@@ -169,7 +170,9 @@ function App() {
   // Uncomment this for Virtualized List
   //  return <VirtualizedList items={items} />;
   // Uncomment this for InfiniteScrolling
-  return <InfiniteScrolling />;
+  // return <InfiniteScrolling />;
+  // Uncomment this for StarRating
+  return <StarRating count={5} />;
 }
 
 export default App;
