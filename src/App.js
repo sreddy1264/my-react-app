@@ -1,7 +1,24 @@
 import './App.css';
 // import Home from './components/Home';
 import { DropDownList } from './components/DropdownList/DropdownList';
-import { findRepetitiveCharFromString } from "./utils/findRepeatedCharFromString";
+import {
+  reverseStringLoop,
+  removeDuplicates,
+  reverseStringMethod,
+  removeDuplicatesLoop,
+  removeSpaces,
+  findRepetitiveCharFromString,
+  findLongestWordInString,
+  findLongestWordInStringLoop,
+  isPalindromeMethod,
+  isPalindromeLoop,
+  removeDuplicatesMethod,
+  isAnagrams,
+  findVowels,
+  findVowelsLoop,
+  getLargestNumber,
+} from "./utils";
+import { VirtualizedList } from './components/VirtualizedList';
 
 function App() {
   //  If we list all the natural numbers below 10 that are multiples of 3
@@ -109,7 +126,25 @@ function App() {
   function reverseString(str) {
     return str.split("").reverse().join("");
   }
-  // console.log("reverseString", reverseString("test"));
+  // console.log("reverseString", reverseString("test test"));
+  // console.log("reverseStringLoop", reverseStringLoop("test test"));
+  // console.log("findLongestWordInString", findLongestWordInString("testinggggg the longest word"));
+  // console.log(
+  //   "findLongestWordInStringLoop",
+  //   findLongestWordInStringLoop("testinggggg the longest word")
+  // );
+  // console.log(
+  //   "isPalindromeMethod",
+  //   isPalindromeMethod("test")
+  // );
+  // console.log("isPalindromeLoop", isPalindromeLoop("madam"));
+  // console.log("removeDuplicatesMethod", removeDuplicatesMethod([1, 1, 4, 4, 5]));
+  //  console.log("removeDuplicatesLoop", removeDuplicatesLoop([1, 1, 4, 4, 5]));
+  //  console.log("isAnagrams", isAnagrams("gum", "mug"));
+  // console.log("findVowels", findVowels("taste"));
+  // console.log("findVowelsLoop", findVowelsLoop("taste"));
+  // console.log("getLargestNumber", getLargestNumber([9,60,3]));
+
   // takes an array of numbers and returns a new array with only the even numbers.
   function findEvenNumber(nums) {
     return nums.filter((num) => num % 2 === 0);
@@ -123,13 +158,14 @@ function App() {
       return num * calculateFactorial(num - 1);
     }
   }
-
+    const items = Array.from({ length: 1000 }, (_, i) => `item: ${i}`);
   // console.log("calculateFactorial", calculateFactorial(9));
-   console.log(
-     "findRepetitiveCharFromString",
-     findRepetitiveCharFromString("aaaarggtrq")
-   );
-  return <DropDownList />;
+  //  console.log(
+  //    "findRepetitiveCharFromString",
+  //    findRepetitiveCharFromString("aaaarggtrq")
+  //  );
+  // return <DropDownList />;
+   return <VirtualizedList items={items} />;
 }
 
 export default App;
