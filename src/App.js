@@ -19,6 +19,7 @@ import {
   getLargestNumber,
 } from "./utils";
 import { VirtualizedList } from './components/VirtualizedList';
+import { InfiniteScrolling } from './components/InfiniteScrolling';
 
 function App() {
   //  If we list all the natural numbers below 10 that are multiples of 3
@@ -158,14 +159,17 @@ function App() {
       return num * calculateFactorial(num - 1);
     }
   }
-    const items = Array.from({ length: 1000 }, (_, i) => `item: ${i}`);
+  const items = Array.from({ length: 1000 }, (_, i) => `item: ${i}`);
   // console.log("calculateFactorial", calculateFactorial(9));
   //  console.log(
   //    "findRepetitiveCharFromString",
   //    findRepetitiveCharFromString("aaaarggtrq")
   //  );
   // return <DropDownList />;
-   return <VirtualizedList items={items} />;
+  // Uncomment this for Virtualized List
+  //  return <VirtualizedList items={items} />;
+  // Uncomment this for InfiniteScrolling
+  return <InfiniteScrolling />;
 }
 
 export default App;
