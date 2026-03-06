@@ -25,6 +25,7 @@ import { Counter } from './components/Counter';
 import { CommentSection } from "./components/comments/CommentSection";
 import { ToggleSwitch } from "./components/ToggleSwitch";
 import { CountdownTimer } from './components/CountdownTimer';
+import { Tabs } from './components/Tabs';
 
 function App() {
   //  If we list all the natural numbers below 10 that are multiples of 3
@@ -184,7 +185,13 @@ function App() {
   // uncomment this for ToggleSwitch
   // return <ToggleSwitch />;
   // uncomment this for CountdownTimer
-  return <CountdownTimer initialSeconds={60} />;
+  // return <CountdownTimer initialSeconds={60} />;
+   const tabs = [
+     { label: "Tab 1", content: <div>Content of Tab 1</div> },
+     { label: "Tab 2", content: <div>Content of Tab 2</div> },
+     { label: "Tab 3", content: <div>Content of Tab 3</div> },
+   ];
+  return <Tabs tabs={tabs} />;
 }
 
 export default App;
