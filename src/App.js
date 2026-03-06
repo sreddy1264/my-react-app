@@ -23,6 +23,7 @@ import { InfiniteScrolling } from './components/InfiniteScrolling';
 import { StarRating } from './components/StarRating';
 import { Counter } from './components/Counter';
 import { CommentSection } from "./components/comments/CommentSection";
+import { ToggleSwitch } from "./components/ToggleSwitch";
 
 function App() {
   //  If we list all the natural numbers below 10 that are multiples of 3
@@ -178,7 +179,9 @@ function App() {
   // Uncomment this for counter
   // return <Counter />;
   //uncomment this for NestedCommentSection
-  return <CommentSection />;
+  // return <CommentSection />;
+  // uncomment this for ToggleSwitch
+  return <ToggleSwitch />;
 }
 
 export default App;
